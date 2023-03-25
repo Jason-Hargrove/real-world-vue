@@ -6,6 +6,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { EventItem } from '@/types'
 // @ is an alias to /src
 import EventCard from '@/components/EventCard.vue'
 import EventService from '@/services/EventService'
@@ -17,7 +18,7 @@ export default defineComponent({
   },
   data() {
     return {
-      events: null,
+      events: [] as EventItem[],
     }
   },
   created() {
